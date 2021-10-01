@@ -92,6 +92,17 @@ body {
   font-size: 36px;
   color: #4f5660;
   text-align: center;
+  -webkit-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.title.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 @media (max-width: 640px) {
@@ -116,6 +127,17 @@ body {
   color: #4f5660;
   text-align: center;
   line-height: 30px;
+  -webkit-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.text.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 @media (max-width: 640px) {
@@ -177,11 +199,14 @@ body {
 
 .header {
   height: 84px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
+  background: transparent;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
 }
 
 .header__container, .header__body {
@@ -198,6 +223,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .header__logo {
@@ -448,6 +474,17 @@ body {
   margin: 0 0 20px 0;
   font-size: 48px;
   font-weight: 600;
+  -webkit-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__title.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 @media (max-width: 770px) {
@@ -472,6 +509,20 @@ body {
   .main-block__title {
     font-size: 22px;
   }
+}
+
+.main-block__subtitle {
+  -webkit-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__subtitle.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .search-block {
@@ -1000,6 +1051,10 @@ body {
 
 .job-offers {
   padding: 98px 10px 108px;
+}
+
+.job-offers__title {
+  margin: 0 0 100px 0;
 }
 
 .curcullum {

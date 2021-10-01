@@ -17,6 +17,13 @@ body{
 	font-size: 36px;
 	color: #4f5660;
 	text-align: center;
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+	&.active{
+		opacity: 1;
+		transform: translate(0,0);
+	}
 	@media (max-width:640px) {
 		font-size: 36px;
 	}
@@ -31,6 +38,13 @@ body{
 	color: #4f5660;
 	text-align: center;
 	line-height: 30px;
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+	&.active{
+		opacity: 1;
+		transform: translate(0,0);
+	}
 	@media (max-width:640px) {
 		font-size: 16px;
 	}
@@ -70,11 +84,13 @@ body{
 }
 .header{
 	height: 84px;
-	position:absolute;
+	position:fixed;
 	top:0;
 	left: 0;
 	width: 100%;
 	z-index: 10;
+	background: transparent;
+	transition: background 0.3s ease 0s;
 	&__container,&__body{
 		height: 100%;
 	}
@@ -82,6 +98,7 @@ body{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 	}
 	&__logo{
 		position: relative;
@@ -259,6 +276,13 @@ body{
 		margin: 0 0 20px 0;
 		font-size: 48px;
 		font-weight: 600;
+		transform: translate(0, 120%);
+		opacity: 0;
+		transition: all 0.8s ease 0s;
+		&.active{
+			opacity: 1;
+			transform: translate(0,0);
+		}
 		@media (max-width:770px) {
 			font-size: 42px;
 		}
@@ -270,6 +294,15 @@ body{
 		}
 		@media (max-width:420px) {
 			font-size: 22px;
+		}
+	}
+	&__subtitle{
+		transform: translate(0, 120%);
+		opacity: 0;
+		transition: all 0.8s ease 0s;
+		&.active{
+			opacity: 1;
+			transform: translate(0,0);
 		}
 	}
 	
@@ -605,6 +638,9 @@ body{
 }
 .job-offers{
 	padding: 98px 10px 108px;
+	&__title{
+		margin: 0 0 100px 0;
+	}
 }
 .curcullum{
 	background: url('../img/curcullum/bg.jpg') center no-repeat;
